@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_estabelecimentos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lf.prontosaude.EstabelecimentosActivity">
+
+    <ListView
+        android:scrollbars="vertical"
+        android:id="@+id/listaEstabelecimentos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinner2"
+        />
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/txtEndereco"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        />
+
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_below="@+id/txtEndereco"
+        android:id="@+id/txtTotalBusca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:elevation="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        android:id="@+id/imageView"
+        android:layout_alignBottom="@+id/txtTotalBusca"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+
+</RelativeLayout>

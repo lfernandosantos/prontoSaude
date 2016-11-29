@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:background="@drawable/google_map_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:background="@drawable/back_lista"
+            android:elevation="6dp"
+            android:layout_margin="12dp"
+            android:id="@+id/card_home_1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_weight="0.5"
+                    android:id="@+id/relativeCard1"
+                    android:background="#FF014A42"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/txtHomeBairro"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtHomeUF"/>
+
+                        <TextView
+                            android:lines="1"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtHomeBairro"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#FF014A42"
+                        android:text="Buscar"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btnLocal"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_margin="12dp"
+            android:layout_below="@+id/card_home_1"
+            android:id="@+id/card_home_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/idTitle"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Busca avancada"
+                android:textSize="16sp"
+                android:background="#FF014A42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_below="@+id/txtViewBusca"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/floatlabelEnd">
+
+                    <EditText
+                        android:background="#00000000"
+                        android:hint="Digite o endereço"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/edtEndereco"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/txtExemplo"
+                    android:textSize="10sp"
+                    android:text="Ex.: Centro, Rio de janeiro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/floatlabelEnd"/>
+
+                <View
+                    android:background="#BDBDBD"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/txtExemplo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:text="Raio de busca:"
+                    android:layout_below="@+id/txtExemplo"
+                    android:id="@+id/lblSeekBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <RelativeLayout
+                    android:padding="2dp"
+                    android:layout_below="@+id/lblSeekBar"
+                    android:orientation="horizontal"
+                    android:id="@+id/linearSeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <ImageView
+                        android:id="@+id/imgRadius"
+                        android:src="@mipmap/ic_map_marker_radius_grey"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        />
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:layout_toRightOf="@id/imgRadius"
+                        android:orientation="horizontal"
+                        android:id="@+id/linearSeek2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/seekBarR"
+                            android:max="30"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@+id/imgRadius"
+                            android:layout_toEndOf="@+id/imgRadius"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+
+                            android:id="@+id/txtStatusSeekBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:background="#BDBDBD"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/linearSeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"/>
+
+                <Spinner
+                    android:spinnerMode="dialog"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:background="#BDBDBD"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/spinnerCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"/>
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textStyle="bold"
+                    android:textColor="#FF014A42"
+                    android:text="Buscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnEndereco"
+                    android:layout_below="@+id/view3"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

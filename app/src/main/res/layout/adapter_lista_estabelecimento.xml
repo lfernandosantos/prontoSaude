@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    >
+
+    <TextView
+        android:maxLines="1"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNomeEstabAdapter"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtCatEstabAdapter"
+        android:layout_below="@+id/txtNomeEstabAdapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/txtEsferaAdmAdapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/txtCatEstabAdapter"
+        android:layout_alignBaseline="@+id/txtCatEstabAdapter"
+        />
+
+    <TextView
+        android:textSize="11sp"
+        android:layout_below="@+id/txtCatEstabAdapter"
+        android:id="@+id/txtEndAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
